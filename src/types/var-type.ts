@@ -2,7 +2,9 @@ import DocumentedItem from "./item";
 
 export default class DocumentedVarType extends DocumentedItem {
     registerMetaInfo(data) {
-        this.directData = data;
+        this.directData = data ?? {
+            names: [],
+        };
     }
 
     serializer() {
